@@ -74,8 +74,25 @@ function work(){
     newBtn.classList.add("knopka");
    newBtn.innerHTML = "Продолжить"
 
+   newBtn.setAttribute("onclick", "work3()")
+   gamebox.appendChild(newBtn);
+}
+function work3(){ 
+    let input = document.getElementById("input2"); 
+    let name = input.value; 
+    let newText = document.createElement("h2"); 
+    newText.innerHTML = " он хочет забрать у вас " +name+  ", вам остается только смотреть так как вы всего лишь человек.";
+      let gamebox = document. 
+      getElementById("gamebox");
+      gamebox.appendChild(newText) ;
+
+      let newBtn = document.createElement("a");
+    newBtn.classList.add("knopka");
+   newBtn.innerHTML = "Продолжить"
+
    newBtn.setAttribute("onclick", "work2()")
    gamebox.appendChild(newBtn);
+
 }
 function work2(){
     let input = document.getElementById("input2"); 

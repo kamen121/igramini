@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">     
+</head> 
+<body> 
+    <nav> 
+        <a class="link" href="https://codeforces.com/">codeforces</a> 
+        <a class="link" href="#aboutme">About Me</a> 
+    </nav> 
+    <section id="aboutme" class="textcenter"> 
+        <div id="gamebox"> 
+            <h1 id="mainTitle">Метеор 3.0</h1> 
+            <p>Введите имя:</p> 
+            <input id="diasUberiTelefon" placeholder="Введите имя"> 
+            <a onclick="work()" class="knopka">Принять</a>        
+        </div> 
+    </section> 
+    <script src="script.js"></script> 
+</body> 
+
+
+
+<style>
+    a{ 
+    text-decoration: none; 
+    font-size: 30px; 
+} 
+nav{ 
+    height: 90px; 
+    display: flex; 
+    align-items: center; 
+} 
+ 
+input{ 
+    font-size: 30px; 
+    padding: 10px 20px; 
+    display: block; 
+    width: calc(100% - 40px); 
+    margin-bottom: 50px; 
+} 
+#aboutme{ 
+    display: flex; 
+    justify-content: center; 
+} 
+#gamebox{ 
+    width: 700px; 
+} 
+.link{ 
+    margin-left: 100px; 
+}
+</style>
+<script>
+function work(){ 
+    let input = document.getElementById("diasUberiTelefon") 
+    let name = input.value; 
+    let newText = document.createElement("h2"); 
+    newText.innerHTML = "Привет, " + name + "! В Алматы прилетел метеор, на котором сидел агрессивный инопланетянин, у тебя в кармане была машина создающая все что угодно, что ты возьмешь чтобы защитится?"; 
+ 
+    let gamebox = document.getElementById("gamebox"); 
+    gamebox.appendChild(newText) ;
+
+    let newInput = document.createElement("input");
+    newInput.id = "input2";
+   gamebox.appendChild(newInput);
+
+   let newBtn = document.createElement("a");
+    newBtn.classList.add("knopka");
+   newBtn.innerHTML = "Продолжить"
+
+   newBtn.setAttribute("onclick", "work2()")
+   gamebox.appendChild(newBtn);
+}
+function work2(){
+    let input = document.getElementById("input2"); 
+    let name = input.value; 
+    let newText = document.createElement("h2"); 
+    newText.innerHTML = "вы сражались с инопланетянином не долго, так как он забрал у вас " +name+  " но он не разобрался как им пользоватся и убил сам себя.... Победа!";
+      let gamebox = document. 
+      getElementById("gamebox");
+      gamebox.appendChild(newText) ;
+}
+</script>
+</html>
